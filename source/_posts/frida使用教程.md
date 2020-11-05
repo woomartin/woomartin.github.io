@@ -10,8 +10,7 @@ tags:
 
 ### hook代码
 
-```java
-
+```python
 import frida
 import sys
 
@@ -20,6 +19,9 @@ jscode = """
 //javascript代码，重点
 Java.perform(function () {
     var apkParseCompat = Java.use('com.hookandroid.apk.library.ApkParseCompat');
+
+    // 打印日志工具
+    console.log(Java.use("android.util.Log").getStackTraceString(Java.use("java.lang.Throwable").$new()));
 
     apkParseCompat.isExitPackage.implementation = function(packageName){
         send("hook start isExitPackage...");
@@ -43,5 +45,28 @@ script = process.create_script(jscode)
 script.on('message', on_message)
 script.load()
 sys.stdin.read()
+
+```
+
+
+```
+
+进入指定app内存
+objection -g com.android.settings explore
+
+内存中so
+memory list modules
+
+内存中so函数
+memory list exports libssl.so
+
+内存中activity
+android hooking list activities
+
+内存中所有类
+android hooking list classes
+
+观察内存类调用
+android hooking watch class android.bluetooth.BluetoothDevice
 
 ```

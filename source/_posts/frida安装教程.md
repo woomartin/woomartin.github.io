@@ -65,7 +65,12 @@ chmod 777 frida-server
 
 ```
 
+### 检测运行状态
+
 ```
+adb forward tcp:27042 tcp:27042
+adb forward tcp:27043 tcp:27043
+
 frida-ps -Ua
 出现进程列表，表示连接成功
 ```
