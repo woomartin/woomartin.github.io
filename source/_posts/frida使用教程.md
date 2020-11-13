@@ -70,3 +70,16 @@ android hooking list classes
 android hooking watch class android.bluetooth.BluetoothDevice
 
 ```
+
+```
+启动应用进程
+frida -U -f com.android.settings 
+
+执行脚本
+python hook.py
+
+打开应用
+%resume
+
+
+```

@@ -26,6 +26,7 @@ adb shell pm install-existing --user 0 com.qihoo.browser
 #### debug模式启动apk
 ```
 
+debug启动
 adb shell am start -D -n com.ali.tg.testapp/.MainActivity
 
 等待debug
