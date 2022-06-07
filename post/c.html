@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>c语言入门 | mark&#39;s BLOG | Android开发者</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="C语言">
+    <meta name="description" content="宏定义12#define time 2021#define M(x, y) time*(x&gt;y?x:y)  指针12345678910111213141516171819202122232425262728293031int a &#x3D; 100;int *b &#x3D; &amp;a; &#x2F;&#x2F; 内存地址赋值printf(&quot;值1：%d, %d\n&quot;, a, *b);*b &#x3D; 200; &#x2F;&#x2F; 真正赋值prin">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c语言入门">
+<meta property="og:url" content="http://hookandroid.com/post/c.html">
+<meta property="og:site_name" content="mark&#39;s BLOG">
+<meta property="og:description" content="宏定义12#define time 2021#define M(x, y) time*(x&gt;y?x:y)  指针12345678910111213141516171819202122232425262728293031int a &#x3D; 100;int *b &#x3D; &amp;a; &#x2F;&#x2F; 内存地址赋值printf(&quot;值1：%d, %d\n&quot;, a, *b);*b &#x3D; 200; &#x2F;&#x2F; 真正赋值prin">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-01-21T06:53:13.000Z">
+<meta property="article:modified_time" content="2022-06-07T06:31:50.227Z">
+<meta property="article:author" content="mark">
+<meta property="article:tag" content="C语言">
+<meta name="twitter:card" content="summary">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">mark</h5>
+          <a href="mailto:946768930@qq.com" title="946768930@qq.com" class="mail">946768930@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                时间轴
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/markLeeXX" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">c语言入门</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">c语言入门</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-01-21T06:53:13.000Z" itemprop="datePublished" class="page-time">
+  2021年01月21日
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#宏定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">宏定义</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#指针"><span class="post-toc-number">2.</span> <span class="post-toc-text">指针</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-c语言入门"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">c语言入门</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021年01月21日 14:53:13" datetime="2021-01-21T06:53:13.000Z"  itemprop="datePublished">2021年01月21日</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h4 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> time 2021</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> M(x, y) time*(x&gt;y?x:y)</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">int</span> *b = &amp;a; <span class="comment">// 内存地址赋值</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值1：%d, %d\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line">*b = <span class="number">200</span>; <span class="comment">// 真正赋值</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值2：%d, %d\n"</span>, a, *b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"内存地址：%#x, %#x\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line">b++;<span class="comment">// 主动修改内存地址</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值3：%d, %d\n"</span>, a, *b);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"内存地址：%#x, %#x\n"</span>, a, *b);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> arr[] = &#123;<span class="number">66</span>, <span class="number">15</span>, <span class="number">100</span>, <span class="number">888</span>, <span class="number">252</span>&#125;;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(arr));</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> len = <span class="keyword">sizeof</span>(arr) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"数组长度：%d\n"</span>, len);</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值：%d\n"</span>, *(arr + <span class="number">1</span>));<span class="comment">// 等价</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"值：%d\n"</span>, arr[<span class="number">1</span>]);<span class="comment">// 等价</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> *p = arr;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *(p + <span class="number">1</span>));<span class="comment">// 15 取数组第一个数字</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p + <span class="number">1</span>);<span class="comment">// 67 取数组第0个数字+1</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p++);<span class="comment">// 66</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p);<span class="comment">// 15</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *++p);<span class="comment">// 100</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, ++*p);<span class="comment">// 101</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">"指针：%d\n"</span>, *p);<span class="comment">// 101</span></span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2022-06-07T06:31:50.227Z" itemprop="dateUpdated">2022年06月07日 14:31:50</time>
+</span><br>
+
+
+        
+        请随意转载，标明原文地址即可。<a href="/post/c.html" target="_blank" rel="external">http://hookandroid.com/post/c.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://hookandroid.com">
+            <img src="/img/avatar.jpg" alt="mark">
+            mark
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C%E8%AF%AD%E8%A8%80/" rel="tag">C语言</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hookandroid.com/post/c.html&title=《c语言入门》 — mark's BLOG&pic=http://hookandroid.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hookandroid.com/post/c.html&title=《c语言入门》 — mark's BLOG&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hookandroid.com/post/c.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《c语言入门》 — mark's BLOG&url=http://hookandroid.com/post/c.html&via=http://hookandroid.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hookandroid.com/post/c.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/post/bilibili.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">B站网络请求</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/post/nginx.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nginx配置</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>mark &copy; 2020 - 2022</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://hookandroid.com/post/c.html&title=《c语言入门》 — mark's BLOG&pic=http://hookandroid.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://hookandroid.com/post/c.html&title=《c语言入门》 — mark's BLOG&source=" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://hookandroid.com/post/c.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《c语言入门》 — mark's BLOG&url=http://hookandroid.com/post/c.html&via=http://hookandroid.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://hookandroid.com/post/c.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://hookandroid.com/post/c.html" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
