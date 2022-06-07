@@ -13,16 +13,19 @@ menu:
     url: /
   th-list:
     text: 分类
-    url: /categories    
+    url: /categories
   tags:
     text: 标签
     url: /tags
   archives:
     text: 时间轴
-    url: /archives    
+    url: /archives
   github:
     url: https://github.com/markLeeXX
     target: _blank
+  user-secret:
+    text: 隐私政策
+    url: /post/youtube.html
 
 # 你的头像url
 avatar: /img/avatar.jpg
@@ -58,7 +61,8 @@ show_last_updated: true
 share: true
 
 # 是否开启打赏，关闭 reward: false
-reward: false
+reward:
+  false
   # title: 谢谢大爷~
   # wechat: /img/wechat.jpg #微信，关闭设为 false
   # alipay: /img/alipay.jpg #支付宝，关闭设为 false
