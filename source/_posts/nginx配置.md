@@ -1,7 +1,7 @@
 ---
 title: nginx配置
 date: 2020-11-05 14:13:33
-urlname:
+urlname: nginx
 tags:
     - 服务器
     - nginx
