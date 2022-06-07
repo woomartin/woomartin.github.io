@@ -6,6 +6,15 @@ tags:
     - adb
 ---
 
+#### Windows连接脚本
+
+```
+@echo off
+cd /d H:\Android\SDK\platform-tools
+adb connect 127.0.0.1:7555
+pause
+```
+
 #### 卸载系统应用
 
 ```

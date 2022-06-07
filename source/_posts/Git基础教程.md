@@ -34,6 +34,11 @@ git commit -m "版本更新"
 ![](git/添加.jpg)
 
 ```
+// 记住密码
+git config --global credential.helper store
+
+// 重命名分支
+git branch -M master
 
 // 查看当前仓库状态
 git status
